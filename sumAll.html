@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <script>
+
+            function sumAll(a,b) {
+
+                var finalSum = 0 ;
+    
+                if((a < 0 || b < 0) || (typeof a !== 'number' || typeof b !== 'number' )){
+                    return 'ERROR' ;
+                }
+                
+                if(arguments[0] > arguments[1]){
+                    var loopCount = a - b;  
+                    countFrom = b;                  
+                }else{
+                    var loopCount = b - a;
+                    countFrom = a;
+                }
+                
+                for(var i=0 ; i<=loopCount ; i++){
+                    var nextNumber = countFrom + i;
+                    finalSum += nextNumber ;
+                }
+                return finalSum;
+            }
+
+        </script>
+
+    </body>
+</html>

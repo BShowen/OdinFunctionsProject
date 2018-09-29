@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title></title>
+    </head>
+    <body>
+
+        <script>
+
+            const removeFromArray = function() {
+
+                var array = arguments[0]; 
+                var arrayArgs = arguments.length-1; 
+
+                for (i = 1 ; i <= arrayArgs ; i++){
+                    if(array.indexOf(arguments[i]) === -1){
+                        continue;
+                    }else{
+                        var x = array.indexOf(arguments[i]);
+                        array.splice(x,1);
+                    }
+                }
+
+                return array; 
+            }
+            
+
+
+            /*This also works. 
+            const removeFromArray = function([a,b,c,d],e,f,g,h) {
+
+                arrayFromArgs = arguments[0];  
+
+
+                if(arguments[1] !== undefined){     
+                    theNewArray1 = arrayFromArgs.splice( arrayFromArgs.indexOf(e) ,1);
+                }
+                
+                if(arguments[2] !== undefined){      
+                    theNewArray2 = arrayFromArgs.splice( arrayFromArgs.indexOf(f) ,1);
+                }
+                
+                if(arguments[3] !== undefined){
+                    theNewArray3 = arrayFromArgs.splice( arrayFromArgs.indexOf(g) ,1); 
+                }
+
+                if(arguments[4] !== undefined){  
+                    theNewArray4 = arrayFromArgs.splice( arrayFromArgs.indexOf(h) ,1); 
+                }
+
+                return arrayFromArgs;
+            }*/
+
+
+
+
+        </script>
+    </body>
+</html>
